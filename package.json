@@ -1,41 +1,41 @@
 {
-	"name": "next-safe-action-monorepo",
-	"version": "0.0.0",
-	"private": true,
-	"description": "next-safe-action monorepo",
-	"scripts": {
-		"prepare": "is-ci || husky install",
-		"example": "turbo run dev --filter=example-app",
-		"lint": "turbo run lint",
-		"build": "turbo run build",
-		"build:lib": "turbo run build --filter=next-safe-action",
-		"deploy": "turbo run deploy"
-	},
-	"author": "Edoardo Ranghieri",
-	"license": "MIT",
-	"engines": {
-		"node": ">=16"
-	},
-	"workspaces": [
-		"packages/*"
-	],
-	"config": {
-		"commitizen": {
-			"path": "./node_modules/cz-conventional-changelog"
-		}
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/TheEdoRan/next-safe-action.git"
-	},
-	"dependencies": {
-		"@commitlint/cli": "^18.2.0",
-		"@commitlint/config-conventional": "^18.1.0",
-		"@manypkg/cli": "^0.21.0",
-		"cz-conventional-changelog": "^3.3.0",
-		"husky": "^8.0.3",
-		"is-ci": "^3.0.1",
-		"semantic-release": "^22.0.5",
-		"turbo": "^1.10.16"
-	}
+  "name": "next-safe-action-monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "description": "next-safe-action monorepo",
+  "scripts": {
+    "prepare": "is-ci || husky install",
+    "example": "turbo run dev --filter=example-app",
+    "lint": "turbo run lint",
+    "build": "node api.js && turbo run build",
+    "build:lib": "turbo run build --filter=next-safe-action",
+    "deploy": "turbo run deploy"
+  },
+  "author": "Edoardo Ranghieri",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.17"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheEdoRan/next-safe-action.git"
+  },
+  "dependencies": {
+    "@commitlint/cli": "^18.2.0",
+    "@commitlint/config-conventional": "^18.1.0",
+    "@manypkg/cli": "^0.21.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.3",
+    "is-ci": "^3.0.1",
+    "semantic-release": "^22.0.5",
+    "turbo": "^1.10.16"
+  }
 }
